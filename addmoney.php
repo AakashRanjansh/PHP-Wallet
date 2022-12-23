@@ -33,7 +33,7 @@ if (mysqli_num_rows($result) > 0) {
 
     echo "<center><h4 style='color:rgb(46, 123, 165) ;'>Thank you for Recharging Wallet<h5 style='color: green;'>Please Navigate to <a href='wallet.php'>Homepage</a> to See Latest Balance...</h5></h4></center>";
 } else {
-    echo "<center><h2 style='color: red;'>Voucher Code Wrong<h3 style='color: green;'>Please Enter Correct Code...</h3> </h2></center>";
+    echo "<center><h2 style='color: red;'>Voucher Code Wrong<h3 style='color: green;'><a href='wallet.php'>Please Enter Correct Code...</a></h3> </h2></center>";
 }
 
 ?>
