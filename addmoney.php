@@ -31,10 +31,15 @@ if (mysqli_num_rows($result) > 0) {
         echo "<br><br><center><h2 style='color: green;'>" . $row["amount"] . " Rupees Added to Ur Wallet</h2></center>";
     }
 
+    $invalid_code = "delete from voucher where code = '$voucher'";
+    mysqli_query($conn, $invalid_code);
+
     echo "<center><h4 style='color:rgb(46, 123, 165) ;'>Thank you for Recharging Wallet<h5 style='color: green;'>Please Navigate to <a href='wallet.php'>Homepage</a> to See Latest Balance...</h5></h4></center>";
 } else {
     echo "<center><h2 style='color: red;'>Voucher Code Wrong<h3 style='color: green;'><a href='wallet.php'>Please Enter Correct Code...</a></h3> </h2></center>";
 }
+
+
 
 ?>
 
